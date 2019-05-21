@@ -6,7 +6,6 @@ const Doctor = new Schema({
     picture: String,
     address: String,
     phone: String,
-    sex: String,
     Specialty: String
 })
 

@@ -8,7 +8,6 @@ Doctors.deleteMany().then(() => {
     picture: String,
     address: '1488 springdowne cir',
     phone: '678-927-5773',
-    sex: 'Male',
     Specialty: 'Obstetrics & Gynecology (Board Certified)'})
     return luke.save()
   }).then(() => {
@@ -17,7 +16,6 @@ Doctors.deleteMany().then(() => {
         picture: String,
         address: '1500 where your momma at',
         phone: '678-927-5775',
-        sex: 'Male',
         Specialty: 'Certified Nurse Practitioner'})
     return mike.save()
   })
