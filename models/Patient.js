@@ -7,7 +7,6 @@ const Patient = new Schema({
     address: String,
     age: Number,
     appointment: String,
-    department: String,
     phone: String,
     sex: String,
     Doctor: [{type:Schema.Types.ObjectId,ref:DoctorCollection}]

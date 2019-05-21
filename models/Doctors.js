@@ -7,7 +7,7 @@ const Doctor = new Schema({
     address: String,
     phone: String,
     sex: String,
-    Specialty: [String]
+    Specialty: String
 })
 
 let DoctorCollection = mongoose.model("Doctor", Doctor);
