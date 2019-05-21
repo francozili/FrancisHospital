@@ -10,4 +10,5 @@ const Doctor = new Schema({
     Specialty: [String]
 })
 
-module.exports = mongoose.model('Doctor', Doctor)
+let DoctorCollection = mongoose.model("Doctor", Doctor);
+module.exports = DoctorCollection

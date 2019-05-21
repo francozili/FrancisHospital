@@ -1,4 +1,5 @@
 const mongoose = require('../db/connection.js')
+const DoctorCollection = require("./Doctors");
 const Schema = mongoose.Schema
 
 const Patient = new Schema({
@@ -9,6 +10,8 @@ const Patient = new Schema({
     department: String,
     phone: String,
     sex: String,
+    Doctor: [{type:Schema.Types.ObjectId,ref:DoctorCollection}]
 })
 
-module.exports = mongoose.model('Patient', Patient)
+let PatientCollection = mongoose.model("Patient", Patient);
+module.exports = PatientCollection
