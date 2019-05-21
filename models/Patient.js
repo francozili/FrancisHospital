@@ -1,13 +1,14 @@
 const mongoose = require('../db/connection.js')
 const Schema = mongoose.Schema
 
-const Doctor = new Schema({
+const Patient = new Schema({
     name: String,
-    picture: String,
     address: String,
+    age: Number,
+    appointment: String,
+    department: String,
     phone: String,
     sex: String,
-    Specialty: [String]
 })
 
-module.exports = mongoose.model('Doctor', Doctor)
+module.exports = mongoose.model('Patient', Patient)
