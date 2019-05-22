@@ -46,7 +46,10 @@ class DoctorsList extends Component {
         axios
             .put(`/api/v1/doctors/${this.props.match.params.id}`, {
                 name: this.state.doctor.name,
-                description: this.state.doctor.description
+                address: this.state.doctor.address,
+                picture: this.state.doctor.picture,
+                phone: this.state.doctor.phone,
+                specialty: this.state.doctor.specialty
             })
             .then(res => {
                 this.setState({ doctor: res.data, isEditFormDisplayed: false })

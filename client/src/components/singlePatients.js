@@ -47,7 +47,11 @@ class PatientsList extends Component {
         axios
             .put(`/api/v1/patients/${this.props.match.params.id}`, {
                 name: this.state.patient.name,
-                description: this.state.patient.description
+                address: this.state.patient.address,
+                age: this.state.patient.age,
+                appointment: this.state.patient.appointment,
+                phone: this.state.patient.phone,
+                doctor: this.state.patient.doctor
             })
             .then(res => {
                 this.setState({ doctor: res.data, isEditFormDisplayed: false })
@@ -69,6 +73,9 @@ class PatientsList extends Component {
                     </div>
                     <div>
                         Age: {this.state.patient.age}
+                    </div>
+                    <div>
+                        Appointment: {this.state.patient.appointment}
                     </div>
                     <div>
                         Address: {this.state.patient.address}
