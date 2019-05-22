@@ -11,7 +11,7 @@ const patientController = {
     },
     show: async (req, res) => {
         try {
-            const patientId = req.params.pid
+            const patientId = req.params.id
             const patient = await Patient.findById(patientId)
             res.json(patient)
         } catch (err) {
@@ -31,7 +31,7 @@ const patientController = {
     },
     update: async (req, res) => {
         try {
-          const patientId = req.params.pid
+          const patientId = req.params.id
           const updatedPatient = req.body
           const savedPatient = await Patient.findByIdAndUpdate(patientId, updatedPatient, {new: true})
           res.json(savedPatient)
@@ -43,7 +43,7 @@ const patientController = {
     delete: async (req, res) => {
         console.log('DELETE')
         try {
-          const patientId = req.params.pid
+          const patientId = req.params.id
           const deletedPatient = await Patient.findByIdAndRemove(patientId)
           res.json(deletedPatient)
         } catch (err) {

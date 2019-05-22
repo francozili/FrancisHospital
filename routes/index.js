@@ -12,9 +12,9 @@ router.delete('/doctors/:id', doctorsController.delete)
 
 router.get('/patients', patientsController.index)
 router.post('/patients', patientsController.create)
-router.get('/patients/:pid', patientsController.show)
-router.put('/patients/:pid', patientsController.update)
-router.delete('/patients/:pid', patientsController.delete)
+router.get('/patients/:id', patientsController.show)
+router.put('/patients/:id', patientsController.update)
+router.delete('/patients/:id', patientsController.delete)
 
 
 module.exports = router
