@@ -22,7 +22,7 @@ class Patients extends Component {
         })
     }
 
-    toggleDoctorForm = () => {
+    togglePatientForm = () => {
         this.setState((state, props) => {
             return ({ isPatientFormDisplayed: !state.isPatientFormDisplayed })
         })
@@ -35,7 +35,7 @@ class Patients extends Component {
         this.setState({ newPatient: cloneNewPatient }, () => { console.log(this.state.newPatient) })
     }
 
-    createPatients = (e) => {
+    createPatient = (e) => {
         e.preventDefault()
         console.log(this.state.newPatient.name)
         axios
