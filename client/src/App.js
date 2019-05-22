@@ -36,7 +36,7 @@ class App extends Component {
           <Route path="/" exact component={Doctors} />
           <Route path="/" exact component={Patients} />
           <Route path="/doctors/:id" exact component={SingleDoctor} />
-          <Route path="/patients/:id" exact component={SingleDoctor} />
+          <Route path="/patients/:id" exact component={SinglePatient} />
         </div>
       </Router>
     );
