@@ -16,28 +16,27 @@ class App extends Component {
       <Router>
         <div className="container">
 
-        <nav className="navbar navbar-expand-lg navbar-light bg-light"> 
-        <a className="navbar-brand" href="/" >
-        <img src={navlogo} width="40" height="40" alt="Logo missing"/>
-        </a>
-        <Link to="/" className="navbar-brand">Francis Teaching Hospital</Link>
-        <div className="nav-collapse">
-        <ul className="navbar-nav mr-auto">
-        <li className="navbar-item">
-        <Link to="/" className="nav-link">Doctors</Link>
-        </li>
-        <li className="navbar-item">
-        <Link to="/" className="nav-link">Patients</Link>
-        </li>
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand" href="/" >
+              <img src={navlogo} width="40" height="40" alt="Logo missing" />
+            </a>
+            <Link to="/" className="navbar-brand">Francis Teaching Hospital</Link>
+            <div className="nav-collapse">
+              <ul className="navbar-nav mr-auto">
+                <li className="navbar-item">
+                  <Link to="/" className="nav-link">Doctors</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/patients" className="nav-link">Patients</Link>
+                </li>
 
-        </ul>
-        </div>
-        </nav>
+              </ul>
+            </div>
+          </nav>
           <Route path="/" exact component={Doctors} />
           <Route path="/" exact component={Patients} />
           <Route path="/doctors/:id" exact component={SingleDoctor} />
-          {/* <Route path="/edit/:id" exact component={EditDoctors} /> */}
-          {/* <Route path="/create" exact component={CreateDoctors} /> */}
+          <Route path="/patients/:id" exact component={SingleDoctor} />
         </div>
       </Router>
     );
