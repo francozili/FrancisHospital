@@ -10,7 +10,7 @@ class DoctorsList extends Component {
             picture: '',
             address: '',
             phone: '',
-            Specialty: ''
+            specialty: ''
         },
         redirectToHome: false,
         isEditFormDisplayed: false
@@ -76,7 +76,7 @@ class DoctorsList extends Component {
                         Phone: {this.state.doctor.phone}
                     </div>
                     <div>
-                        Specialty: {this.state.doctor.Specialty}
+                        Specialty: {this.state.doctor.specialty}
                     </div>
                     <button onClick={this.deleteDoctor}>Delete</button>
                 </div>

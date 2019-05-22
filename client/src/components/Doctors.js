@@ -10,8 +10,7 @@ class Doctors extends Component {
         picture: '',
         address: '',
         phone: '',
-        sex: '',
-        Specialty: ''
+        specialty: ''
       },
       isDoctorFormDisplayed: false
   }
@@ -52,7 +51,7 @@ class Doctors extends Component {
                     picture: '',
                     address: '',
                     phone: '',
-                    Specialty: ''
+                    specialty: ''
                 },
                 isDoctorFormDisplayed: false,
                 doctors: doctorsList
@@ -82,26 +81,6 @@ class Doctors extends Component {
         {
             this.state.isDoctorFormDisplayed
                 ? <form onSubmit={this.createDoctor}>
-                    {/* <div>
-                        <label htmlFor="name">Name</label>
-                        <input
-                            id="name"
-                            type="text"
-                            name="name"
-                            onChange={this.handleChange}
-                            value={this.state.newCreature.name}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="description">Description</label>
-                        <textarea
-                            id="description"
-                            type="text"
-                            name="description"
-                            onChange={this.handleChange}
-                            value={this.state.newCreature.description}
-                        />
-                    </div> */}
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
                         <input type="text"
@@ -135,25 +114,6 @@ class Doctors extends Component {
                             name="specialty"
                             onChange={this.handleChange} />
                     </div>
-                    {/* <div className="form-check form-check-inline">
-                        <label htmlFor="name">SEX</label>
-                        <input className="form-check-input"
-                            type="radio"
-                            name="Options"
-                            id="female"
-                            value="Female"
-                            checked={this.state.Doctors_sex === 'Female'}
-                            onChange={this.onChangeDoctorsSex}
-                        />
-                        <input className="form-check-input"
-                            type="radio"
-                            name="Options"
-                            id="male"
-                            value="Male"
-                            checked={this.state.Doctors_sex === 'Male'}
-                            onChange={this.onChangeDoctorsSex}
-                        />
-                    </div> */}
                     <button>Create</button>
                 </form>
                 : null

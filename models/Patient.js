@@ -1,5 +1,5 @@
 const mongoose = require('../db/connection.js')
-const DoctorCollection = require("./Doctors");
+const DoctorCollection = require("./Doctors.js");
 const Schema = mongoose.Schema
 
 const Patient = new Schema({
