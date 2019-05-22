@@ -4,7 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Doctors from "./components/Doctors.js"
+import Patients from "./components/Patients.js"
 import SingleDoctor from "./components/singleDoctor.js"
+import SinglePatient from "./components/singlePatients.js"
 // import EditDoctors from "./components/singleDoctor"
 import navlogo from "./components/images/logo.png"
 
@@ -25,13 +27,14 @@ class App extends Component {
         <Link to="/" className="nav-link">Doctors</Link>
         </li>
         <li className="navbar-item">
-        <Link to="/create" className="nav-link">Patients</Link>
+        <Link to="/" className="nav-link">Patients</Link>
         </li>
 
         </ul>
         </div>
         </nav>
           <Route path="/" exact component={Doctors} />
+          <Route path="/" exact component={Patients} />
           <Route path="/doctors/:id" exact component={SingleDoctor} />
           {/* <Route path="/edit/:id" exact component={EditDoctors} /> */}
           {/* <Route path="/create" exact component={CreateDoctors} /> */}
