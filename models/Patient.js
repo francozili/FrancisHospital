@@ -8,7 +8,7 @@ const Patient = new Schema({
     age: Number,
     appointment: String,
     phone: String,
-    doctor: [{type:Schema.Types.ObjectId,ref:DoctorCollection}]
+    doctor: [{ type: Schema.Types.ObjectId, ref: DoctorCollection }]
 })
 
 let PatientCollection = mongoose.model("Patient", Patient);

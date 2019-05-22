@@ -136,7 +136,7 @@ class PatientsList extends Component {
                             name="doctor"
                             onChange={this.handleChange} />
                     </div>
-                    <input type="submit" value="update doctor"/>
+                    <input type="submit" value="update doctor" />
                 </form>
             </div>
         );

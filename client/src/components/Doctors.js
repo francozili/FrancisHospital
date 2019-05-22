@@ -40,7 +40,10 @@ class Doctors extends Component {
         axios
             .post('/api/v1/doctors', {
                 name: this.state.newDoctor.name,
-                description: this.state.newDoctor.description
+                address: this.state.newDoctor.address,
+                picture: this.state.newDoctor.picture,
+                phone: this.state.newDoctor.phone,
+                specialty: this.state.newDoctor.specialty
             })
             .then(res => {
                 const doctorsList = [...this.state.doctors]
